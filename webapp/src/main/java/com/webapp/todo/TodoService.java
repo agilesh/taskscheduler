@@ -1,0 +1,34 @@
+package com.webapp.todo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TodoService {
+	
+	private static List<Todo> todos =new ArrayList<Todo>();
+	
+	static
+	{
+		todos.add(new Todo("learn mvc"));
+		todos.add(new Todo("learn java"));
+		todos.add(new Todo("learn threading"));
+	}
+	
+	public static List<Todo> retrieveTodos()
+	{
+		return todos;
+	}
+	
+	public static void addTodo(Todo todo)
+	{
+		todos.add(todo);
+	}
+	
+	
+	public static void deleteTodo(Todo todo)
+	{
+		todos.remove(todo);
+	}
+	
+
+}
